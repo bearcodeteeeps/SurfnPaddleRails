@@ -1,0 +1,78 @@
+header {
+  color: #333;
+}
+
+.jumbotron {
+  background-image: url(surf_sup);
+  background-size: cover;
+  /*background:url(https://unsplash.it/1440/302) top center center no-repeat;*/
+  background-attachment: fixed;
+  color: #333;
+  width: 100%;
+  padding: 0px:
+}
+
+.navbar img {
+  height: 50px;
+}
+.navbar a {
+  color: #333;
+  font-weight: bold;
+}
+.navbar-text {
+  color: #333;
+}
+
+.navbar-default {
+  background: none !important;
+  background-color: transparent;
+  border: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+.shaded {
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.post-wrapper {
+  width: 100vw;
+}
+
+footer {
+  width: 100vw;
+}
+
+.lead-imgs {
+  width: 100vw;
+}
+
+.lead-img {
+  width: 25vw;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .lead-img {
+    width: 33vw;
+  }
+}
+
+/* Small devices (tablets, 768px and up) trouble@481-767 */
+@media screen and (min-width : 768px) {
+  .lead-img {
+    width: 25vw;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .lead-img {
+    width: 25vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}

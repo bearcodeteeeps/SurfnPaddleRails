@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jim Bootstrap 101 Template</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+  <header class="jumbotron jumbotron-fluid">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <button class="btn-link"><a class="navbar-brand navbar-left" href="#"><%= image_tag "logo-surf-and-paddle.svg", :class => "navbar-logo" %></a></button>
+          <button class="btn-link"><a style="color:#333" class="navbar-text" href="#"><%= link_to "Surf N Paddle CO. Blog", index_path %></a></button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><button type="button" class="btn btn-link btn-lg"><a href="#">About</a></button></li>
+            <li><button type="button" class="btn btn-link btn-lg"><a href="#">Search<%= image_tag "noun_16508_cc.svg", :class => "search-img shaded" %> <span class="sr-only">(current)</span></a></button></li>
+            <li></li>
+          </ul>
+        </div><!-- /.navbar -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      <h1 class="text-center">Organization Name</h1>
+      <h4 class="text-center lead">OMG! Super Awesome</h4>
+  </header>
+
+  <%= yield %>
+
+  <footer class="">
+    <section class="post-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Most Popular Posts</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row lead-imgs">
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <img class="lead-img" src="https://unsplash.it/360/220" alt="post">
+            <div class="carousel-caption">
+              <%= link_to @posts.first.title, post_path(id: @posts.first.id)%>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <img class="lead-img" src="https://unsplash.it/360/221" alt="post">
+            <div class="carousel-caption">
+              <%= link_to @posts.second.title, post_path(id: @posts.second.id)%>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <img class="lead-img" src="https://unsplash.it/360/220" alt="post">
+            <div class="carousel-caption">
+              <%= link_to @posts.third.title, post_path(id: @posts.third.id)%>
+            </div>
+            </div>
+          <div class="col-md-3 col-sm-3 hidden-xs">
+            <img class="lead-img" src="https://unsplash.it/360/221" alt="post">
+            <div class="carousel-caption">
+              <%= link_to @posts.fourth.title, post_path(id: @posts.fourth.id)%>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <div class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-footer">
+          <%= image_tag "logo-surf-and-paddle.svg", :class => "navbar-logo" %>
+          <button class="btn-link"><a style="color:#333" class="navbar-text" href="#">Surf N Paddle CO. Blog</a></button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><button type="button" class="btn btn-link btn-lg"><a href="#">5</a></button></li>
+          </ul>
+        </div><!-- /.navbar -->
+      </div><!-- /.container-fluid -->
+    </div>
+  </footer>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>
