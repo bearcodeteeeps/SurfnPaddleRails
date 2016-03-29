@@ -7,7 +7,7 @@ end
 
 def show
   @posts = Post.all.sort_by { |post| post.created_at }.reverse
-  @post = @posts.detect { |post| post.id == params[:id].to_i }
+  @post = Post.find(params[:id])
 end
 
 end
