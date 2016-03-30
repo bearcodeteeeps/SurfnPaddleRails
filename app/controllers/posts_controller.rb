@@ -11,8 +11,11 @@ end
 
 def create
   @post = Post.new(post_params)
-  @post.save
-  redirect_to @post
+  if @post.save
+    redirect_to @post
+  else
+    render :new
+  end
 end
 
 def show
@@ -26,8 +29,11 @@ end
 
 def update
   @post = Post.find(params[:id])
-  @post.update(post_params)
-  redirect_to @post
+  if @post.update(post_params)
+    redirect_to @post
+  else
+    render :edit
+  end
 end
 
 def distroy
