@@ -1,0 +1,18 @@
+<h1>New Post</h1>
+<%= form_for @post do |f| %>
+  <div>
+    <%= f.label :title, 'The Title' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author, 'The Author' %>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :body, 'The Blog Article' %>
+    <%= f.text_area :body, size: "60x12" %>
+  </div>
+  <div>
+    <%= f.submit "New Post" %>
+  </div>
+<% end %>
