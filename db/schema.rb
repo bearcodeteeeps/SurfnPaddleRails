@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20160329172601) do
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",      default: "You Can't Handle the Truth"
-    t.string   "author",     default: "Anonymous"
-    t.text     "body",       default: "Nothing yet!"
+    t.string   "title"
+    t.string   "author"
+    t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

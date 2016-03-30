@@ -58,32 +58,18 @@
           </div>
         </div>
       </div>
+      <% if @posts %>
       <div class="row lead-imgs">
+          <% @posts.first(4).each do |post| %>
           <div class="col-md-3 col-sm-3 col-xs-4">
             <img class="lead-img" src="https://unsplash.it/360/220" alt="post">
             <div class="carousel-caption">
-              <%= link_to @posts.first.title, post_path(id: @posts.first.id)%>
+              <%= link_to post.title, post_path(id: post.id) if post_path(id: post.id) %>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-4">
-            <img class="lead-img" src="https://unsplash.it/360/221" alt="post">
-            <div class="carousel-caption">
-              <%= link_to @posts.second.title, post_path(id: @posts.second.id)%>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-4">
-            <img class="lead-img" src="https://unsplash.it/360/220" alt="post">
-            <div class="carousel-caption">
-              <%= link_to @posts.third.title, post_path(id: @posts.third.id)%>
-            </div>
-            </div>
-          <div class="col-md-3 col-sm-3 hidden-xs">
-            <img class="lead-img" src="https://unsplash.it/360/221" alt="post">
-            <div class="carousel-caption">
-              <%= link_to @posts.fourth.title, post_path(id: @posts.fourth.id)%>
-            </div>
-          </div>
+        <% end %>
       </div>
+<% end %>
     </section>
 
     <div class="navbar navbar-default">

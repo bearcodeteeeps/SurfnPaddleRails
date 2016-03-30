@@ -1,0 +1,30 @@
+<h1>Edit The Post</h1>
+
+<% if @post.errors.any?%>
+  <div class="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this article from being saved:</h2>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @post do |f| %>
+  <div>
+    <%= f.label :title, 'The Title' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author, 'The Author' %>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :body, 'The Blog Article' %>
+    <%= f.text_area :body, size: "60x12" %>
+  </div>
+  <div>
+    <%= f.submit "Update Post" %>
+  </div>
+<% end %>
