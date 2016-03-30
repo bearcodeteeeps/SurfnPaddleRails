@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
 
 def index
-  @posts = Post.order('created_at DESC').all
-  @post = @posts.first
+  @posts = Post.order('created_at DESC').all.to_a
+  @post = @posts.shift
 end
 
 def new
